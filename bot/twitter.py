@@ -1,6 +1,9 @@
 import tweepy
 from os import environ
 
+from bot.utils.tweet_writter import Tweet_writter
+
+
 class Bot:
     def __init__(self):
         # Authenticate to Twitter
@@ -9,7 +12,7 @@ class Bot:
         # Create API object
         self.api = tweepy.API(auth)
 
-    def tweet(self, text:str=False, path_image:str=False):
+    def tweet(self, text: str = False, path_image: str = False):
         """
         tweet avec une img si souhaité
         :param text: str
@@ -22,4 +25,7 @@ class Bot:
 
 if __name__ == '__main__':
     t = Bot()
-    print(t.tweet("Ce bot est trop bien 📌","./img.jpeg"))
+    tweet_writter = Tweet_writter()
+
+    tweet_text = tweet_writter.write_tweet()
+    print(t.tweet(tweet_text, "./data/temp2.jpg"))

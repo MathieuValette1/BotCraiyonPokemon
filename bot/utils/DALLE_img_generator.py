@@ -1,14 +1,15 @@
 from docarray import Document
 from settings import SERVER_URL
-from prompt_generator import Prompt_generator
+
 
 class DALLE_img_generator:
 
     def __init__(self):
-        self.my_prompt_generator = Prompt_generator()
         self.server_url = SERVER_URL
 
-    def generate_png(self):
-        prompt = self.my_prompt_generator.generate_prompt()
-
+    def generate_png(self, prompt):
+        print("Generating jpg...")
         print(prompt)
+        da = Document(text=prompt).post(self.server_url, parameters={'num_images': 2}).matches
+        da.plot_image_sprites(output="../data/temp2.jpg", fig_size=(10, 10), show_index=True)
+        print("jpg generated")

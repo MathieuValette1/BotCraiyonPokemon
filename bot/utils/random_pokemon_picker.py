@@ -10,7 +10,7 @@ class Random_pokemon_picker:
     """
 
     def __init__(self):
-        with open("../data/pokedex.json", 'r', encoding="utf8") as f:
+        with open("../data/pokedex_until_4g.json", 'r', encoding="utf8") as f:
             self.pokedex = json.load(f)
 
     def pick_random_pokemon_as_dict(self):

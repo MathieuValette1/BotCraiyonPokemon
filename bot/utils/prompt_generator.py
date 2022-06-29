@@ -19,9 +19,14 @@ class Prompt_generator:
 
         template = random.choice(self.templates)
 
-        on_a_bicycle = ' on a bicycle'
+        # on_a_bicycle = ' in a realistic style'
 
-        prompt = template.format(pokemon_name_english) + on_a_bicycle
+        prompt = template.format(pokemon_name_english)
 
+        # prompt = f"{pokemon_name_english} "
 
-        return prompt
+        tweet = f"✨ N°{pokemon_id} - {prompt}" \
+                f"\n {pokemon_name_french} - {pokemon_name_japanese}" \
+                f"\n\n #pokemon #DALL-E #{pokemon_name_french}"
+
+        return prompt, tweet
