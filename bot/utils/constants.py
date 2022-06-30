@@ -1,7 +1,6 @@
 TEMPLATES = [
     'a photo of a {}',
     'a painting of a {}',
-    'a sculpture of a {}',
     'a sketch of a {}',
     'a tattoo of a {}',
     'a rendition of a {}',
@@ -9,5 +8,4 @@ TEMPLATES = [
     'a {} in a video game',
     'art of a {}',
     'a drawing of a {}',
-    'a doodle of a {}'
 ]
