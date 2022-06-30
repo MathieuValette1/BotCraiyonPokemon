@@ -1,5 +1,5 @@
-from constants import TEMPLATES
-from random_pokemon_picker import Random_pokemon_picker
+from .constants import TEMPLATES
+from .random_pokemon_picker import Random_pokemon_picker
 import random
 
 
@@ -27,6 +27,6 @@ class Prompt_generator:
 
         tweet = f"✨ N°{pokemon_id} - {prompt}" \
                 f"\n {pokemon_name_french} - {pokemon_name_japanese}" \
-                f"\n\n #pokemon #DALL-E #{pokemon_name_french}"
+                f"\n\n #pokemon #DALLE #{pokemon_name_french}"
 
-        return prompt, tweet
+        return prompt, tweet, pokemon_name_english

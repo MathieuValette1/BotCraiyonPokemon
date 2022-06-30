@@ -1,5 +1,5 @@
 from docarray import Document
-from settings import SERVER_URL
+from .settings import SERVER_URL
 
 
 class DALLE_img_generator:
@@ -11,5 +11,6 @@ class DALLE_img_generator:
         print("Generating jpg...")
         print(prompt)
         da = Document(text=prompt).post(self.server_url, parameters={'num_images': 2}).matches
-        da.plot_image_sprites(output="../data/temp2.jpg", fig_size=(10, 10), show_index=True)
+        da.plot_image_sprites(output="data/temp2.jpg", fig_size=(10, 10), show_index=True)
         print("jpg generated")
+

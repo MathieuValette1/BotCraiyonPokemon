@@ -1,1 +1,1 @@
-from img_generator import *
+from .tweet_writter import Tweet_writter

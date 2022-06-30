@@ -1,5 +1,5 @@
-from DALLE_img_generator import DALLE_img_generator
-from prompt_generator import Prompt_generator
+from .DALLE_img_generator import DALLE_img_generator
+from .prompt_generator import Prompt_generator
 
 
 class Tweet_writter:
@@ -10,8 +10,8 @@ class Tweet_writter:
 
     def write_tweet(self):
         print("Writting tweet")
-        prompt, tweet_text = self.my_prompt_generator.generate_prompt()
+        prompt, tweet_text, pokemon_name = self.my_prompt_generator.generate_prompt()
         self.img_generator.generate_png(prompt)
         print("Tweet written")
 
-        return tweet_text
+        return tweet_text, pokemon_name

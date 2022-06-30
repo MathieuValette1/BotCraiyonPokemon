@@ -2,9 +2,9 @@ import tweepy
 import os
 from dotenv import load_dotenv
 
-if not os.path.isfile(".env"):
-    print("No config found.")
-    exit("Please read README.md.")
+# if not os.path.isfile(".env"):
+#     print("No config found.")
+#     exit("Please read README.md.")
 
 load_dotenv()
 
@@ -39,9 +39,6 @@ class Bot:
 
 if __name__ == '__main__':
     t = Bot()
-    res = t.tweet("Tweet #2", ["./saki.jpeg", "./Incendie-3.png"])
-
-    print("c'est terminé.")
 
 
     #tweet_writter = Tweet_writter()
