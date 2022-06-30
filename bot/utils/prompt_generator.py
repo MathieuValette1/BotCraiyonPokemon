@@ -27,6 +27,6 @@ class Prompt_generator:
 
         tweet = f"✨ N°{pokemon_id} - {prompt}" \
                 f"\n {pokemon_name_french} - {pokemon_name_japanese}" \
-                f"\n\n #Pokémon #DALLE #{pokemon_name_french}"
+                f"\n\n #Pokémon #DALLE #{pokemon_name_french} 🤖"
 
         return prompt, tweet, pokemon_name_english
